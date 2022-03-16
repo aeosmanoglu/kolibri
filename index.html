@@ -1,22 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--
+    TODO: favicon
+    TODO: facebook and twitter metatags
+    TODO: real content
+    TODO: about
+    TODO: contact
+    TODO: support
+    TODO: footer
+    TODO: divide project with nextjs or jekyll
+    TODO: mobile test
+    TODO: chrome lighthouse
+    TODO: images rescale
+    TODO: navbar active
+  -->
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kolibri Educations - From Teachers to Teachers</title>
   <link rel="stylesheet" href="./assets/style.min.css">
+  <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+  <nav class="navbar navbar-expand-lg navbar-light py-4">
     <div class="container">
       <a class="navbar-brand" href="/">
         <picture>
           <source
             srcset="./assets/images/bird.webp 1x, ./assets/images/bird@2x.webp 2x, ./assets/images/bird@3x.webp 3x"
             type="image/webp">
-          <img src="./assets/images/bird.png" alt="Kolibri Educations" height="24"
+          <img src="./assets/images/bird.png" alt="Kolibri Educations" height="32"
             srcset="./assets/images/bird.png 1x, ./assets/images/bird@2x.png 2x, ./assets/images/bird@3x.png 3x">
         </picture>
         kolibri <span class="text-primary">education</span>
@@ -48,13 +63,12 @@
     </div>
   </nav>
 
-  <header class="container">
+  <header class="container" id="header">
     <div class="hstack gap-5 bg-light align-items-center p-5 mt-3">
       <article>
-        <h1 class="display-5">Lorem ipsum dolor sit amet.</h1>
+        <h1 class="display-5">Lorem ipsum dolor <span class="text-primary">sit amet.</span></h1>
         <p class="lead text-muted mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos nam numquam
-          maiores
-          impedit quam sequi. Sunt est harum quos nemo iusto qui ab debitis eos.</p>
+          maiores impedit quam sequi. Sunt est harum quos nemo iusto qui ab debitis eos.</p>
         <a href="#" class="btn btn-primary btn-lg">Get Started <i class="bi bi-arrow-right-short ms-3"></i></a>
       </article>
       <picture>
@@ -66,7 +80,7 @@
     </div>
   </header>
 
-  <section class="container">
+  <section class="container" id="highlights">
     <h2 class="fw-bold text-center mb-5">Lorem ipsum dolor sit amet.</h2>
     <div class="row">
       <div class="col">
@@ -199,10 +213,121 @@
     </div>
   </section>
 
+  <section class="container-fluid bg-light p-5">
+    <div class="container">
+      <h2 class="fw-bold text-center mb-3">Digital Solutions</h2>
+      <p class="lead text-center mb-5 text-muted col-8 mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Debitis reiciendis eaque libero? Atque cumque ullam harum reprehenderit quas expedita fuga?</p>
+      <div class="row align-items-center">
+        <div class="col">
+          <img src="/assets/images/sampledevice.png" class="img-fluid">
+        </div>
+        <div class="col">
+          <h3 class="fw-bold mb-3">Item 1</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti aut beatae ipsa dicta, iure tenetur.
+            Asperiores commodi debitis modi! Molestiae quaerat velit atque, dolorum numquam a? At, sequi sunt! Vel!
+          </p>
+          <p>
+            Cumque dolore corrupti quia maxime impedit eveniet tenetur sed excepturi quo, deserunt atque voluptas quis
+            ex omnis enim perferendis vitae. Autem commodi, exercitationem nam eius voluptas placeat facilis inventore
+            dolorum.Consequatur culpa facere sunt expedita repellat fuga. Sit in commodi laboriosam quidem earum animi,
+            nam, iure, alias magni sint maiores molestias accusamus adipisci veniam unde. Temporibus, magni.
+          </p>
+          <p>
+            Illo ut, excepturi deserunt voluptatibus architecto fuga consequatur? Enim velit aperiam id repellendus
+            quidem eum ducimus, asperiores incidunt, a nesciunt ut doloribus quas quo! Suscipit cumque doloribus
+            recusandae repellat veritatis.
+          </p>
+          <ul>
+            <li>This is a list.</li>
+            <li>It appears completely unstyled.</li>
+            <li>Structurally, it's still a list.</li>
+            <li>However, this style only applies to immediate child elements.</li>
+            <li>This may still come in handy in some situations.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row align-items-center flex-row-reverse">
+        <div class="col">
+          <img src="/assets/images/sampledevice.png" class="img-fluid">
+        </div>
+        <div class="col">
+          <h3 class="fw-bold mb-3">Item 2</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti aut beatae ipsa dicta, iure tenetur.
+            Asperiores commodi debitis modi! Molestiae quaerat velit atque, dolorum numquam a? At, sequi sunt! Vel!
+          </p>
+          <p>
+            Illo ut, excepturi deserunt voluptatibus architecto fuga consequatur? Enim velit aperiam id repellendus
+            quidem eum ducimus, asperiores incidunt, a nesciunt ut doloribus quas quo! Suscipit cumque doloribus
+            recusandae repellat veritatis.
+          </p>
+          <ul>
+            <li>This is a list.</li>
+            <li>It appears completely unstyled.</li>
+            <li>Structurally, it's still a list.</li>
+            <li>However, this style only applies to immediate child elements.</li>
+            <li>This may still come in handy in some situations.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <h2 class="fw-bold text-center mb-5">Print Materials</h2>
+    <div class="row row-cols-4 g-5">
+      <div class="col">
+        <div class="card border-secondary">
+          <img src="https://picsum.photos/200?random=1" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text text-center">Title</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card border-secondary">
+          <img src="https://picsum.photos/200?random=2" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text text-center">Title</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card border-secondary">
+          <img src="https://picsum.photos/200?random=3" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text text-center">Title</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card border-secondary">
+          <img src="https://picsum.photos/200?random=4" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text text-center">Title</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
   <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
   <script>
     new PureCounter();
+    ScrollReveal().reveal('#header', {
+      distance: '5%',
+      origin: 'bottom',
+      duration: '2000'
+    });
+    ScrollReveal().reveal('#highlights', {
+      distance: '5%',
+      origin: 'bottom',
+      duration: '2000',
+      delay: '500'
+    });
   </script>
 
 </body>

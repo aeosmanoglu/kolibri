@@ -8,6 +8,19 @@ $headings-font-family: "Playfair Display";
 $enable-rounded: false;
 $card-height: 100%;
 
+$white: #ffffff;
+$primary: #bf0a8f;
+$theme-colors: (
+  "light": #fff3f3,
+  "dark": #020345,
+  "primary": $primary,
+  "secondary": #fbccdc,
+  "info": #0d78e2,
+  "success": #6cb211,
+  "warning": #ff9d00,
+  "danger": #ce2533,
+);
+
 // 3. Include remainder of required Bootstrap stylesheets
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
@@ -25,6 +38,7 @@ $card-height: 100%;
 @import "../node_modules/bootstrap/scss/transitions";
 @import "../node_modules/bootstrap/scss/buttons";
 @import "../node_modules/bootstrap/scss/card";
+@import "../node_modules/bootstrap/scss/images";
 
 // 5. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
 @import "../node_modules/bootstrap/scss/utilities/api";
@@ -36,9 +50,21 @@ nav {
   position: sticky !important;
   top: 0;
   z-index: 100;
+  background-color: rgba(255, 255, 255, 0.6);
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid $primary;
+}
+
+a:hover {
+  color: $primary !important;
 }
 
 section {
   margin-top: 6rem;
   margin-bottom: 6rem;
+}
+
+.card-link {
+  text-decoration: none;
 }
