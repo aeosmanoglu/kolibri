@@ -85,7 +85,9 @@
               data-bs-target=".navbar-collapse.show">Support</a>
           </li>
         </ul>
-        <button class="btn btn-primary btn-sm">Get Started</button>
+        <button class="btn btn-primary btn-sm">
+          <span class="cta"></span>
+        </button>
       </div>
     </div>
   </nav>
@@ -96,7 +98,8 @@
         <h1 class="display-5">Lorem ipsum dolor <span class="text-primary">sit amet.</span></h1>
         <p class="lead text-muted mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos nam numquam
           maiores impedit quam sequi. Sunt est harum quos nemo iusto qui ab debitis eos.</p>
-        <a href="#" class="btn btn-primary btn-lg">Get Started <i class="bi bi-arrow-right-short ms-3"></i></a>
+        <a href="#" class="btn btn-primary btn-lg"><span class="cta"></span><i
+            class="bi bi-arrow-right-short ms-3"></i></a>
       </article>
       <picture>
         <source srcset="./assets/images/hero.webp 1x, ./assets/images/hero@2x.webp 2x, ./assets/images/hero@3x.webp 3x"
@@ -345,6 +348,15 @@
     crossorigin="anonymous"></script>
   <script src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.min.js"></script>
+
+  <script>
+    const userLang = navigator.language || navigator.userLanguage;
+    const buttons = document.querySelectorAll('.cta');
+    buttons.forEach(button => {
+      button.innerText = userLang === 'tr-TR' ? 'Ön Kayıt' : 'Pre-Registration';
+    });
+  </script>
+
   <script>
     new PureCounter();
     ScrollReveal().reveal('#header', {
